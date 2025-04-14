@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    justify-content: center;
+    background-color: black;
+    overflow: hidden;
+}
+
+.image-contaner{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style:preserve-3d;
+                                    /*اعطاء مسافة بين الصور*/
+    transform: perspective(1000px)  rotateY(0deg);
+    /*اعطاء حركة شبة بطيئة لحركة الصورةوتحديد حجمها*/
+    transition: transform 0.7s;
+}
+
+.image-contaner span{
+    position: absolute; /*هان صار الصور جنب بعض*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(400px);/*هان بدات اسوي حركة الصور */
+}
+
+.image-contaner span img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.btn-container{
+    position: relative;/*هيك راح يكون مكان البتن ثابت*/
+    width: 80%;
+    justify-content: space-between;
+}
+
+.btn{
+    position: absolute;
+    bottom:-80px;
+    background-color: slateblue;
+    color: white;
+    border: none;
+    padding: 10px 20px ;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    filter: brightness(1.5);
+}
+
+#prev{
+    left: 20%;/*هيك كل ما اكبر الشاشة راح يروح على اليسار مع ترك مساف 20*/
+}
+
+#next{
+    right: 20%;/*هيك كل ما اكبر الشاشة راح يروح على اليمين مع ترك مساف 20*/
+}
