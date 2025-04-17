@@ -524,7 +524,6 @@ section{
 }
 
 
-
 .services {
     background: #f3f3f3;
     padding: 50px 20px;
@@ -539,9 +538,6 @@ section{
 }
 
 /**/
-
-
-
 .box {
     background: #fff;
     padding: 15px;
@@ -594,6 +590,7 @@ section{
 .services .box-contianer .box{
     background-color: var(--white);
     box-shadow: var(--box-shadow);
+    height: 400px;
     padding: 2rem;
     text-align: center;
 }
